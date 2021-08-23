@@ -1,3 +1,8 @@
+#### Fork news:
+In this version, the customImageComponent method receives an _item_ field within the props with the information of the item that is being rendered. In this way, we can condition the rendering based on some attribute of the item.
+
+#### Base Doc
+
 <a href="https://luehangs.site/lue_hang/projects/react-native-masonry-list"><img src="https://luehangs.site/images/react-native-masonry-list-main.jpg" alt="react-native-masonry-list"/></a>
 
 <a href="https://luehangs.site/marketplace/product/RN%20Posting%20Demo%20App%20Kit"><img src="https://luehangs.site/images/lh-mobile-strip.jpg" alt="LueHsoft LueH LABS Lue Hang luehang"/></a>
@@ -247,7 +252,7 @@ render() {
 | `imageContainerStyle`         | The styles object which is added to the Image component. | `object` | {} |
 | `listContainerStyle`          | Styles for the list container. | `object` | |
 | `containerWidth`              | The width of the masonry list layout. Adding this will improve performance. **Version \*2.0.0 update** | `number` |
-| `customImageComponent`        | Use a custom component to be rendered for the image as long as the component follows the standard interface of the `react-native` `Image` component. **Version \*1.2.2 update**. | `React.Component` | `Image` module import of react-native |
+| `customImageComponent`        | Use a custom component to be rendered for the image as long as the component follows the standard interface of the `react-native` `Image` component. **Version \*1.2.2 update**.  **New in Fork:** You component get item in props.| `React.Component` | `Image` module import of react-native |
 | `customImageProps`            | An object to pass additional properties to the `customImageComponent`. **Version \*1.2.2 update**. | `object` | |
 | `completeCustomComponent`     | This Function or React Component is called as an alternative to render each image. Must return a React Element or Component, and it is required to have the source and style for the component to display proper masonry. `({ source: object, style: { width: number, height: number, margin: number }, data: object }) => React.Element` **Version \*1.2.2 update**. | `Function` or `React.Component` | |
 | `renderIndividualHeader`      | A component, React Element, or Function that is executed **ABOVE** each individual masonry image. `(item: { column: number, index: number, dimensions: { width: number, height: number }, masonryDimensions: { width: number, height: number, margin: number, gutter: number }, source: object, ...data }, index: number) => ?React.Element` | `Function`, `React.Component`, or `React.Element` | |

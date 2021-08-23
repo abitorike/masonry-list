@@ -32,6 +32,7 @@ export default class TouchableImageComponent extends React.PureComponent {
 				onPress={() => onPressImage && onPressImage(data, data.index)}
 				onLongPress={() => onLongPressImage && onLongPressImage(data, data.index)}>
 				<ImageComponent
+					data={data}
 					width={width}
 					height={height}
 					gutter={gutter}

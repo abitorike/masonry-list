@@ -5,6 +5,7 @@ import Injector from "./Injector";
 
 export default class ImageComponent extends React.PureComponent {
 	static propTypes = {
+		data: PropTypes.object,
 		width: PropTypes.number.isRequired,
 		height: PropTypes.number.isRequired,
 		gutter: PropTypes.number.isRequired,
@@ -19,6 +20,7 @@ export default class ImageComponent extends React.PureComponent {
 
 	render() {
 		const {
+			data,
 			width,
 			height,
 			gutter,
@@ -28,6 +30,7 @@ export default class ImageComponent extends React.PureComponent {
 			customImageProps
 		} = this.props;
 		const imageProps = {
+			item: data,
 			source: source,
 			resizeMethod: "auto",
 			style: {
